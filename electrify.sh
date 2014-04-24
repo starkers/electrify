@@ -151,7 +151,7 @@ step8(){
 				[Yy]* ) 
 					mkdir -p "$DB" || err
 					cd "$DB" || err
-					( wget -O - "http://foundry.electrum.org/leveldb-dump/electrum-fulltree-100-latest.tar.gz" | tar --extract --gunzip --strip-components 1 --directory "$DB" --file - ) || err
+					( wget -O - "http://foundry.electrum.org/leveldb-dump/electrum-fulltree-10000-latest.tar.gz" | tar --extract --gunzip --strip-components 1 --directory "$DB" --file - ) || err
 					chown -R bitcoin:bitcoin "$DB" ||err
 					chmod -R  u+rwx,g+rx,g-w,o-rwx  "$DB" #just 'cause I'm oldskool
 				;;
